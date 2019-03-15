@@ -18,7 +18,7 @@ ga('send', 'pageview');
 
 <script>
 ga_trackers=[];
-ga(
+ga(function(){
 	ga.getAll().forEach(function(x,i){
 	ga_trackers.push(x.get('name'))});
 	ga_trackers.forEach(
@@ -40,7 +40,7 @@ ga(
 	"companyDomain":"dimension13"
 	}});
 	});
-);
+});
 </script>
 
 <script async src="https://ga.clearbit.com/v1/ga.js?authorization=pk_f7667777e11394cc1d2cbbad40058d88">
