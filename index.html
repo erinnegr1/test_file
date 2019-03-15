@@ -18,27 +18,29 @@ ga('send', 'pageview');
 
 <script>
 ga_trackers=[];
-ga.getAll().forEach(function(x,i){
-ga_trackers.push(x.get('name'))});
-ga_trackers.forEach(
-function(gaName){
-ga(gaName + '.require', 'Clearbit', { 
-"mapping":{
-"type":"dimension1",
-"companyName":"dimension2",
-"companyIndustry":"dimension3",
-"companySubIndustry":"dimension4",
-"companyEmployeesRange":"dimension5",
-"companyEstimatedAnnualRevenue":"dimension6",
-"companyAlexaRank":"dimension7",
-"companyCity":"dimension8",
-"companyState":"dimension9",
-"companyCountry":"dimension10",
-"companySicCode":"dimension11",
-"companyTech":"dimension12",
-"companyDomain":"dimension13"
-}});
-});
+ga(
+	ga.getAll().forEach(function(x,i){
+	ga_trackers.push(x.get('name'))});
+	ga_trackers.forEach(
+	function(gaName){
+	ga(gaName + '.require', 'Clearbit', { 
+	"mapping":{
+	"type":"dimension1",
+	"companyName":"dimension2",
+	"companyIndustry":"dimension3",
+	"companySubIndustry":"dimension4",
+	"companyEmployeesRange":"dimension5",
+	"companyEstimatedAnnualRevenue":"dimension6",
+	"companyAlexaRank":"dimension7",
+	"companyCity":"dimension8",
+	"companyState":"dimension9",
+	"companyCountry":"dimension10",
+	"companySicCode":"dimension11",
+	"companyTech":"dimension12",
+	"companyDomain":"dimension13"
+	}});
+	});
+);
 </script>
 
 <script async src="https://ga.clearbit.com/v1/ga.js?authorization=pk_f7667777e11394cc1d2cbbad40058d88">
